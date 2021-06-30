@@ -1,5 +1,9 @@
 function BinarySearch(t,Arr)       // t - искомый элемент,
-{                                // Arr - упорядоченный массив, в котором ищем.
+{   
+    Arr = Arr.sort(function(a,b){  //сортируем массив по возрастанию
+        return a - b;
+    });
+                
     let firstElArr = 0; 
     let lastElArr = Arr.length; 
     let average = 0; 
@@ -14,4 +18,4 @@ function BinarySearch(t,Arr)       // t - искомый элемент,
     else return -1;                 // Если искомого элемента нет в массиве, то -1.
 }
 
-alert(`search index = ${BinarySearch(8, [1, 2, 3, 4, 5, 6, 7, 8])}`);
+alert(`search index = ${BinarySearch(8, [23, 332, 3, 40, 5, 60, 7, 8])}`);
