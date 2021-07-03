@@ -1,0 +1,26 @@
+
+body { 
+    display: flex;
+    height: 100vh; 
+}
+
+#calculator { 
+    margin: auto; 
+    padding: 20px;
+    background: rgb(192, 192, 192);
+    border-radius: 10px;
+}
+
+#display, button {
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 5px;
+    font: bold 30px Impact;
+}
+
+#display {
+    width: 450px;
+    text-align: right;
+}
