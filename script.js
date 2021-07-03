@@ -1,15 +1,12 @@
-function dontGiveMeFive(firsNumber, lastNumber) {
+let inputArray = [1, 3, 21];
+let sum = 0;
 
-    let result = 0;
-
-    for (let i = firsNumber; i < lastNumber + 1; i++) {
-        
-        if (String(i).includes('5')) {
-            result = result;
-        } else {
-            result += 1;
-        }
-    }
-    return result;
+for (let elementInput of inputArray) {
+    sum += elementInput;
 }
-console.log(dontGiveMeFive(25, 95));
+
+if (sum % 2 == 0) {
+    console.log('Output: "even"');
+} else {
+    console.log('Output: "odd"');
+}
