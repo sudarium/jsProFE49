@@ -1,14 +1,11 @@
-The museum of incredible dull things
-The museum of incredible dull things wants to get rid of some exhibitions. Miriam, the interior architect, comes up with a plan to remove the most boring exhibitions. She gives them a rating, and then removes the one with the lowest rating.
+While developing a website, you detect that some of the members have troubles logging in. Searching through the code you find that all logins ending with a "_" make problems. So you want to write a function that takes an array of pairs of login-names and e-mails, and outputs an array of all login-name, e-mails-pairs from the login-names that end with "_".
 
-However, just as she finished rating all exhibitions, she's off to an important fair, so she asks you to write a program that tells her the ratings of the items after one removed the lowest one. Fair enough.
+If you have the input-array:
 
-Task
-Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
+[ [ "foo", "foo@foo.com" ], [ "bar_", "bar@bar.com" ] ]
+it should output
 
-Don't change the order of the elements that are left.
-```
-Examples
-removeSmallest [1,2,3,4,5] = [2,3,4,5]
-removeSmallest [5,3,2,1,4] = [5,3,2,4]
-removeSmallest [2,2,1,2,1] = [2,2,2,1]
+[ [ "bar_", "bar@bar.com" ] ]
+You have to use the filter-method which returns each element of the array for which the filter-method returns true.
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter

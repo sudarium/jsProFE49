@@ -1,22 +1,10 @@
-function deleteSmallestIndex(inputArray) {
+let defaultArray = [ [ "foo", "foo@foo.com" ],[ "bar_", "bar@bar.com" ], ["poo_", "poo@poo.com"] ];
 
-    let comparison = +Infinity;
-    let arrayIndexCount = 0;
+let fixArray = [];
 
-    if (inputArray.length == 0) {
-        return inputArray;
-    } else {
-        for (let i = 0, j = 0; i < inputArray.length; i++, j++) {
-            if (inputArray[i] < comparison) {
-                comparison = inputArray[i];
-                arrayIndexCount = j;
-            } else {
-                comparison = comparison;
-            }
-        }
-        inputArray.splice(arrayIndexCount, 1);
+for (let i = 0; i < defaultArray.length; i++){
+    if(/_/.test(defaultArray[i][0])){
+        fixArray.push(defaultArray[i])
     }
-    return inputArray
 }
-console.log(deleteSmallestIndex([11, 2, 3, 1, 8, 1]));
-console.log(deleteSmallestIndex([]));
+console.log(fixArray);
