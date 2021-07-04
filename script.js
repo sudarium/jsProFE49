@@ -1,12 +1,22 @@
-let inputArray = [1, 3, 21];
-let sum = 0;
+function deleteSmallestIndex(inputArray) {
 
-for (let elementInput of inputArray) {
-    sum += elementInput;
-}
+    let comparison = +Infinity;
+    let arrayIndexCount = 0;
 
-if (sum % 2 == 0) {
-    console.log('Output: "even"');
-} else {
-    console.log('Output: "odd"');
+    if (inputArray.length == 0) {
+        return inputArray;
+    } else {
+        for (let i = 0, j = 0; i < inputArray.length; i++, j++) {
+            if (inputArray[i] < comparison) {
+                comparison = inputArray[i];
+                arrayIndexCount = j;
+            } else {
+                comparison = comparison;
+            }
+        }
+        inputArray.splice(arrayIndexCount, 1);
+    }
+    return inputArray
 }
+console.log(deleteSmallestIndex([11, 2, 3, 1, 8, 1]));
+console.log(deleteSmallestIndex([]));
