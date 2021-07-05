@@ -29,10 +29,10 @@ function deleteSmallestIndex(inputArray) {
     if (inputArray.length == 0) {
         return inputArray;
     } else {
-        for (let i = 0, j = 0; i < inputArray.length; i++, j++) {
+        for (let i = 0; i < inputArray.length; i++) {
             if (inputArray[i] < comparison) {
                 comparison = inputArray[i];
-                arrayIndexCount = j;
+                arrayIndexCount = i;
             } 
         }
         inputArray.splice(arrayIndexCount, 1);
