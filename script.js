@@ -1,5 +1,5 @@
 function dontGiveMeFive(firsNumber, lastNumber) {
-    let result = 0;
+let result = 0;
 
     for (let i = firsNumber; i < lastNumber + 1; i++) {
 
@@ -7,8 +7,6 @@ function dontGiveMeFive(firsNumber, lastNumber) {
             result += 1;
         }
     }
-    return result;
+    return  result;
 }
 console.log(dontGiveMeFive(1, 5));
-
-
