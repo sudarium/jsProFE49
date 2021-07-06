@@ -22,12 +22,11 @@
 // console.log(deleteSmallestIndex([]));
 
 function deleteSmallestIndex(inputArray) {
-
-    let comparison = inputArray[0];
-    let arrayIndexCount = 0;
+let comparison = inputArray[0];
+let arrayIndexCount = 0;
 
     if (inputArray.length == 0) {
-        return inputArray;
+        return  inputArray;
     } else {
         for (let i = 0; i < inputArray.length; i++) {
             if (inputArray[i] < comparison) {
@@ -37,7 +36,7 @@ function deleteSmallestIndex(inputArray) {
         }
         inputArray.splice(arrayIndexCount, 1);
     }
-    return inputArray
+    return  inputArray
 }
 console.log(deleteSmallestIndex([11, 2, 3, 1, 8, 1]));
 console.log(deleteSmallestIndex([]));
