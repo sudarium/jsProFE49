@@ -11,12 +11,11 @@
 //     console.log('Output: "odd"');
 // }
 
-function oddOrEven(array) {
-    return array.reduce(function(sum, item) {
-      return sum + item
-    }, 0) % 2 == 0 ? 'even' : 'odd';
-  }
-  
-  console.log(oddOrEven([1, 7, 3]));
-  console.log(oddOrEven([1, 3, 6, 8]));
-  console.log(oddOrEven([]));
+
+const array = [1, 3, 5, 7];
+
+let sum = array.reduce(function (total, element) {
+    return total + element;
+}, 0);
+
+sum % 2 == 0 ? console.log('Even') : console.log('Odd');
